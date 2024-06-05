@@ -1,0 +1,5 @@
+member_key	first_name	last_name	loyalty_id	address1	address2	zipcode	status
+1001	Sherlock	Holmes	100001	Baker Street		111111	current
+1002	John	Watson		Baker Street		111111	current
+1003	James	bond	100003	East Street	NY	222222	current
+1004	Jack	SPARROW	100004	West Street	NJ	333333	current

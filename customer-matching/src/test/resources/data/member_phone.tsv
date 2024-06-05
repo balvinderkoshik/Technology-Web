@@ -1,0 +1,4 @@
+phone_number	member_key	status	is_loyalty_flag
+123456789	1001	current	YES
+987654323	1001	current	NO
+981234567	1002	current	NO

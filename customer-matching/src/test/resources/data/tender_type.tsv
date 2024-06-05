@@ -1,0 +1,5 @@
+tender_type_key	tender_type_code	is_bank_card	status
+1	00	NO	current
+2	01	NO	current
+3	03	YES	current
+4	04	YES	current

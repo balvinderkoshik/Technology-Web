@@ -1,0 +1,7 @@
+email_address	member_key	valid_email	status	is_loyalty_email
+SHERLOCK@GMAIL.COM	1001	YES	current	YES
+sherlock.holmes@gmail.com	1001	YES	current NO
+holmes@gmail.com	1001	YES	current	NO
+JOHN@GMAIL.COM	1002	YES	current	NO
+john.watson@gmail.com	1002	YES	current	NO
+watson@gmail.com	1002	YES	current	NO
