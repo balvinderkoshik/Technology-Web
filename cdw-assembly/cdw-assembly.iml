@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="customer-matching" />
+    <orderEntry type="library" name="Maven: com.typesafe.scala-logging:scala-logging-slf4j_2.10:2.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.10.6" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.scala-logging:scala-logging-api_2.10:2.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.7" level="project" />
+    <orderEntry type="module" module-name="commons" />
+    <orderEntry type="module" module-name="customer-enrichment" />
+    <orderEntry type="library" name="Maven: oracle:ojdbc6:11.2.0.3" level="project" />
+    <orderEntry type="module" module-name="customer-dedup" />
+    <orderEntry type="library" name="Maven: me.xdrop:fuzzywuzzy:1.1.6" level="project" />
+    <orderEntry type="module" module-name="dim-fact-load" />
+  </component>
+</module>

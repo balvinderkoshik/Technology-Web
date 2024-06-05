@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+
+    <id>cdw-assembly</id>
+
+    <formats>
+        <format>zip</format>
+    </formats>
+
+    <fileSets>
+        <fileSet>
+            <directory>${project.parent.basedir}/apps</directory>
+            <outputDirectory>apps</outputDirectory>
+            <fileMode>0755</fileMode>
+        </fileSet>
+    </fileSets>
+    <files>
+        <file>
+            <source>${project.parent.basedir}/customer-matching/target/customer-matching-${cdw-processing-version}.jar
+            </source>
+            <outputDirectory>apps/appl/subject_areas/customer/customer_project/customer_matching/lib</outputDirectory>
+        </file>
+        <file>
+            <source>${project.parent.basedir}/dim-fact-load/target/dim-fact-load-${cdw-processing-version}.jar
+            </source>
+            <outputDirectory>apps/appl/subject_areas/customer/customer_project/lib</outputDirectory>
+        </file>
+        <file>
+            <source>
+                ${project.parent.basedir}/customer-enrichment/target/customer-enrichment-${cdw-processing-version}.jar
+            </source>
+            <outputDirectory>apps/appl/subject_areas/customer/customer_project/lib</outputDirectory>
+        </file>
+        <file>
+            <source>${project.parent.basedir}/customer-dedup/target/customer-dedup-${cdw-processing-version}.jar
+            </source>
+            <outputDirectory>apps/appl/subject_areas/customer/customer_project/lib</outputDirectory>
+        </file>
+        <file>
+            <source>${project.parent.basedir}/historical-load/target/historical-load-${cdw-processing-version}.jar
+            </source>
+            <outputDirectory>apps/appl/subject_areas/customer/customer_project/lib</outputDirectory>
+        </file>
+        <file>
+            <source>${project.parent.basedir}/customer-edw/target/customer-edw-${cdw-processing-version}.jar</source>
+            <outputDirectory>apps/appl/subject_areas/customer/customer_project/lib</outputDirectory>
+        </file>
+        <file>
+            <source>${project.parent.basedir}/customer-kpi/target/customer-kpi-${cdw-processing-version}.jar</source>
+            <outputDirectory>apps/appl/subject_areas/customer/customer_project/lib</outputDirectory>
+        </file>
+        <file>
+            <source>${project.build.directory}/git.properties</source>
+            <destName>VERSION</destName>
+            <outputDirectory>.</outputDirectory>
+            <lineEnding>lf</lineEnding>
+        </file>
+        <file>
+            <source>${project.build.directory}/version.properties</source>
+            <outputDirectory>apps/appl/etc</outputDirectory>
+            <lineEnding>lf</lineEnding>
+        </file>
+    </files>
+
+
+</assembly>

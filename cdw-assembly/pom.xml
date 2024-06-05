@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cdw-processing</artifactId>
+        <groupId>com.express</groupId>
+        <version>1.4</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cdw-assembly</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.express</groupId>
+            <artifactId>customer-matching</artifactId>
+            <version>${cdw-processing-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.express</groupId>
+            <artifactId>customer-enrichment</artifactId>
+            <version>${cdw-processing-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.express</groupId>
+            <artifactId>customer-dedup</artifactId>
+            <version>${cdw-processing-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.express</groupId>
+            <artifactId>dim-fact-load</artifactId>
+            <version>${cdw-processing-version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>git-property</id>
+                    </execution>
+                    <execution>
+                        <id>version-property</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>revision</goal>
+                        </goals>
+                        <configuration>
+                            <generateGitPropertiesFilename>${project.build.directory}/version.properties
+                            </generateGitPropertiesFilename>
+                            <includeOnlyProperties>
+                                <includeOnlyProperty>git.build.version</includeOnlyProperty>
+                            </includeOnlyProperties>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
